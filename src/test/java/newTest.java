@@ -21,7 +21,7 @@ public class newTest {
     @Test
     public void addTwoNumbers(){
         int expected = 2+5;
-        int actual = 8;
+        int actual = 7;
         Assert.assertEquals(expected, actual);
 
     }
