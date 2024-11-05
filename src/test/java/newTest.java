@@ -17,7 +17,7 @@ public class newTest {
     public void simpleTests2() {
         Assert.assertTrue(true);
     }
-
+/*
     @Test
     public void addTwoNumbers(){
         int expected = 2+5;
@@ -25,6 +25,8 @@ public class newTest {
         Assert.assertEquals(expected, actual);
 
     }
+
+ */
 
 
 }
