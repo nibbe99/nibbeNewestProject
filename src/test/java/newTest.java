@@ -42,12 +42,16 @@ public class newTest {
         driver = new ChromeDriver(option);
     }
 
-    @Test
-    public void myTest() {
+    @BeforeEach
+    public void navigate() {
         driver.manage().deleteAllCookies();  // Clear cookies or reset session after each test
         driver.get("https://www.iths.se");
+    }
+
+    @Test
+    public void testTitel() {
         String titel = driver.getTitle();
-        Assert.assertEquals("IT-Högskolan – Här startar din IT-karriär!", titel);
+        Assert.assertEquals("IT-Högskolan – Här startar din IT-karriärs!", titel);
 
     }
 
