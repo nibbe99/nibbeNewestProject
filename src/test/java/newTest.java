@@ -38,7 +38,7 @@ public class newTest {
         ChromeOptions option = new ChromeOptions();
         option.addArguments("--remote-allow-origin=*");
         option.addArguments("incognito");
-        // option.addArguments("headless");
+        option.addArguments("headless");
         driver = new ChromeDriver(option);
         driver.manage().deleteAllCookies();  // Clear cookies or reset session after each test
         driver.get("https://www.iths.se");
