@@ -1,5 +1,5 @@
 import org.junit.Assert;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -33,17 +33,21 @@ public class newTest {
 
  */
 
-    @Test
-    public void setup() {
+    @BeforeAll
+    static void setup() {
         ChromeOptions option = new ChromeOptions();
         option.addArguments("--remote-allow-origin=*");
         option.addArguments("incognito");
         option.addArguments("headless");
         driver = new ChromeDriver(option);
+    }
+
+    @Test
+    public void myTest() {
         driver.manage().deleteAllCookies();  // Clear cookies or reset session after each test
         driver.get("https://www.iths.se");
         String titel = driver.getTitle();
-        Assert.assertEquals("IT-Högskolan – Här startar din IT-karriärs!", titel);
+        Assert.assertEquals("IT-Högskolan – Här startar din IT-karriär!", titel);
 
     }
 
