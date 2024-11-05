@@ -42,7 +42,8 @@ public class newTest {
         driver = new ChromeDriver(option);
         driver.manage().deleteAllCookies();  // Clear cookies or reset session after each test
         driver.get("https://www.iths.se");
-
+        String titel = driver.getTitle();
+        Assert.assertEquals("IT-Högskolan – Här startar din IT-karriärs!", titel);
 
     }
 
